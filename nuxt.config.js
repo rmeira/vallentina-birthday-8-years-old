@@ -33,12 +33,12 @@ export default {
       {
         hid: 'og:url',
         name: 'og:url',
-        content: 'https://vallen.rafaelmeira.com.br',
+        content: 'https://vallentina.rafaelmeira.com.br',
       },
       {
         hid: 'og:image',
         name: 'og:image',
-        content: 'https://vallen.rafaelmeira.com.br/icon.jpg',
+        content: 'https://vallentina.rafaelmeira.com.br/icon.jpg',
       },
     ],
     link: [
