@@ -1,6 +1,6 @@
 <template>
   <v-main class="secondary">
-    <v-toolbar height="80" color="primary">
+    <v-toolbar height="80" color="accent" light>
       <v-toolbar-title>
         Presenças - Adultos: {{ adults }} - Crianças: {{ children }}
       </v-toolbar-title>
@@ -51,7 +51,7 @@ export default {
         .get('/api/presences')
         .then((response) => {
           this.presences = response.data.filter(
-            (presence) => presence.event_id === 2
+            (presence) => presence.event_id === 3
           )
         })
         .catch(() => {
@@ -76,5 +76,3 @@ export default {
   },
 }
 </script>
-
-<style></style>

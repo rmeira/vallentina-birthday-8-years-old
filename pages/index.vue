@@ -1,13 +1,19 @@
 <template>
   <v-main class="secondary">
-    <v-img :src="background" width="100%" />
-    <v-sheet color="primary" width="100%" height="10" />
-    <v-sheet color="transparent" class="title text-center pa-2 pt-6">
+    <v-img
+      :src="background"
+      width="100%"
+      class="d-flex align-end text-center"
+      gradient="to top right, rgba(142,100,201,.3), rgba(0,0,0,.0)"
+    >
+      <h1 class="display-3 font-weight-bold text-uppercase accent--text">Vallen</h1>
+    </v-img>
+    <v-sheet color="transparent" class="title text-center pa-2 pt-6" >
       Você está convidado para um dia cheio de aventuras e encanto em meu
       aniversário!
     </v-sheet>
     <v-sheet width="100%" class="d-flex justify-center" color="transparent">
-      <v-avatar size="140" style="border: 3px solid #f39202">
+      <v-avatar size="140" class="elevation-2">
         <v-img src="/icon.jpg"> </v-img>
       </v-avatar>
     </v-sheet>
@@ -16,7 +22,8 @@
         <template v-slot:activator="{ on, attrs }">
           <v-btn
             x-large
-            color="secondary"
+            color="accent"
+            class=" black--text"
             v-bind="attrs"
             rounded
             block
@@ -26,8 +33,8 @@
           </v-btn>
         </template>
         <v-form ref="presenceFormRef" @submit.prevent="handleSubmitForm()">
-          <v-card class=" rounded-xl" light>
-            <v-toolbar color="secondary" dark height="80" elevation="0">
+          <v-card class="rounded-xl" light>
+            <v-toolbar color="accent" height="80" elevation="0">
               <v-toolbar-title class="font-weight-bold">
                 Confirme sua presença
               </v-toolbar-title>
@@ -82,8 +89,7 @@
             <v-divider></v-divider>
             <v-card-actions class="pa-4">
               <v-spacer></v-spacer>
-              <v-btn color="secondary" rounded large type="submit" width="200">
-                <v-icon left> mdi-check </v-icon>
+              <v-btn color="accent" rounded large type="submit" width="200" class=" black--text">
                 Confirmar
               </v-btn>
             </v-card-actions>
@@ -96,8 +102,8 @@
       width="100%"
       class="pa-6 subtitle-1 font-weight-bold"
     >
-      Esperamos vocês no dia 14 de novembro as 19h30 no Buffet Viva Vida
-      Granja Vianna, confira o endereço abaixo
+      Esperamos vocês no dia 14 de novembro as 19h30 no Buffet Viva Vida Granja
+      Vianna, confira o endereço abaixo
     </v-sheet>
     <v-sheet color="transparent" width="100%" class="pb-0">
       <iframe
@@ -118,7 +124,7 @@ import background from '~/assets/background.jpeg'
 import validateMixin from '~/mixins/validateMixin'
 
 const presencePayload = {
-  event_id: 2,
+  event_id: 3,
   family_name: null,
   adults: null,
   children: null,

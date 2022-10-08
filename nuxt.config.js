@@ -1,5 +1,6 @@
 require('dotenv').config()
 import colors from 'vuetify/es5/util/colors'
+import pt from "vuetify/es5/locale/pt"
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -21,12 +22,14 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Você está convidado para um dia cheio de aventuras em meu aniversário!',
+        content:
+          'Você está convidado para um dia cheio de aventuras em meu aniversário!',
       },
       { name: 'format-detection', content: 'telephone=no' },
       {
         property: 'og:description',
-        content: 'Você está convidado para um dia cheio de aventuras em meu aniversário!',
+        content:
+          'Você está convidado para um dia cheio de aventuras em meu aniversário!',
       },
       { hid: 'og:title', name: 'og:title', content: 'Vallen 8 anos' },
       { hid: 'og:type', name: 'og:type', content: 'website' },
@@ -45,7 +48,23 @@ export default {
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: 'https://vallen.rafaelmeira.com.br/icon.jpg',
+        href: 'https://vallentina.rafaelmeira.com.br/icon.jpg',
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap',
+      },
+      {
+        rel: "stylesheet",
+        href: "https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css",
       },
     ],
   },
@@ -97,13 +116,22 @@ export default {
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    font: {
+      family: "'Fredoka One', cursive",
+    },
+    treeShake: true,
+    defaultAssets: false,
+    lang: {
+      locales: { pt },
+      current: "pt",
+    },
     theme: {
       dark: true,
       themes: {
         dark: {
-          primary: '#fcc208',
-          accent: '#fcc208',
-          secondary: '#347176', ///347176
+          primary: '#f87bfc',
+          accent: '#f5ca2f',
+          secondary: '#8c49bd', ///347176
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,

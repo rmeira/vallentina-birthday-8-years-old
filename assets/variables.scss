@@ -1,4 +1,4 @@
-// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
-//
-// The variables you want to modify
-// $font-size-root: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+$body-font-family: 'Fredoka One', cursive;
+$heading-font-family: 'Fredoka One', cursive;
+@import "~vuetify/src/styles/styles.sass";
